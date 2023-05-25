@@ -1,38 +1,299 @@
-.App {
-  text-align: center;
+.container{
+  display: flex;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-main{
+  flex: 1;
+  content: url("./assets//bg-main-desktop.png")
+  /* height: 100%; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cartao{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 230px;
+  /* background-repeat: no-repeat;  */
+  z-index: 99;
+  color: hsl(270, 3%, 87%);
+}
+.cartao.c1{
+  top: 20%;
+  left: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cartao.c2{
+  top: 60%;
+  left: 15%;
+}
+
+.cartao .conteudo-cartao{
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  z-index: 999;
+}
+
+.cartao .header-cartao{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cartao .header-cartao div:first-child{
+  width: 50px; 
+  height: 50px;
+  border-radius: 25px; 
+  background-color: hsl(0, 0%, 100%);
+}
+.cartao .header-cartao div{
+  width: 15px; 
+  height: 15px;
+  border: 1px solid hsl(0, 0%, 100%);;
+  border-radius: 25px;
+}
+
+.cartao .front{
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+}
+
+.cartao .back{
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cartao.c2 p{
+  z-index: 1;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 37%;
+  right: 10%;
+}
+
+.cartao .conteudo-cartao .dados{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cartao .conteudo-cartao .dados .num-cartao p{
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.cartao .conteudo-cartao .dados .nome-cvc{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartao .nome-cvc p{
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.formulario{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* background-color: aqua; */
+}
+.formulario .complete{
+  width: 400px;
+  gap: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.formulario .complete h1{
+  margin: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(278, 68%, 11%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.formulario .complete p{
+  margin: 0;
+  color: hsl(270, 3%, 87%);
+}
+
+.formulario .complete a {
+  width: 100%;
+  text-align: center;
+  background-color: hsl(278, 68%, 11%);
+  padding: 20px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 10px;
+  font-family: Space Grotesk, sans-serif;
+  color: hsl(270, 3%, 87%);
+}
+
+.formulario form{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 20px;
+  /* background-color: RED; */
+}
+
+.formulario form fieldset{
+  /* background-color: blue; */
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.formulario form fieldset legend{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.formulario form fieldset input{
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid hsl(279, 6%, 55%);
+  padding: 15px;
+  font-size: 18px;
+  font-family: Space Grotesk, sans-serif;
+}
+
+.formulario fieldset input:focus{
+  border: 1px solid hsl(278, 68%, 11%);
+}
+
+.formulario fieldset input.erro{
+  border: 1px solid hsl(0, 100%, 66%);
+}
+
+.formulario fieldset p{
+  margin: 0;
+  margin-top: 4px;
+  color: hsl(0, 100%, 66%)
+}
+
+.formulario .data-cvc{
+  display: flex;
+  gap: 20px;
+}
+
+.formulario .data-cvc .cvc input{
+  width: 75%;
+}
+
+.formulario .data-cvc .data{
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+.formulario .data-cvc .data .container-datas{
+  display: flex;
+  gap: 10px;
+}
+
+.formulario .data-cvc .data input{
+  width: 50px;
+}
+
+.formulario form a{
+  text-align: center;
+  background-color: hsl(278, 68%, 11%);
+  padding: 20px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 10px;
+  font-family: Space Grotesk, sans-serif;
+  color: hsl(270, 3%, 87%);
+  min-width: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .container{
+    display: block;
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+  .bg-main{
+    content: url("./assets/bg-main-mobile.png");
+    width: 100vw;
+    height: 500px;
+  }
+  .cartao{
+    width: 280px;
+    height: 150px;
+  }
+
+  .cartao.c1{
+    top: 19%;
+    left: 5%;
+    z-index: 1;
+  }
+
+  .cartao.c2{
+    top: 5%;
+    z-index: 0;
+  }
+
+  .cartao.c2 p{
+    font-size: 12px;
+    top: 36%;
+  }
+
+  .cartao .header-cartao{
+    gap: 10px;
+  }
+
+  .cartao .header-cartao div:first-child{
+    width: 30px; 
+    height: 30px;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .cartao .header-cartao div{
+    width: 10px; 
+    height: 10px;
+  }
+
+  .cartao .conteudo-cartao .dados .num-cartao p{
+    font-size: 16px;
+  }
+
+  .cartao .conteudo-cartao .dados .nome-cvc p{
+    font-size: 12px;
+  }
+
+  .cartao .conteudo-cartao{
+    gap: 10px;
+  }
+
+  .formulario{
+    flex: 1;
+    margin-top: 70px;
+    /* padding: 0 20px; */
+  }
+
+  .formulario form {
+    padding: 0 20px;
+  }
+
+  .formulario fieldset legend{
+    font-size: 12px;
   }
 }
