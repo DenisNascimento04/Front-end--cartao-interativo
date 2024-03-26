@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Front-end--cartao-interativo/static/css/main.f76b31ee.css",
-    "main.js": "/Front-end--cartao-interativo/static/js/main.65915251.js",
+    "main.css": "/Front-end--cartao-interativo/static/css/main.fcfca13a.css",
+    "main.js": "/Front-end--cartao-interativo/static/js/main.c66b230e.js",
     "static/media/bg-main-desktop.png": "/Front-end--cartao-interativo/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
     "static/media/bg-card-back.png": "/Front-end--cartao-interativo/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
     "static/media/bg-card-front.png": "/Front-end--cartao-interativo/static/media/bg-card-front.8153e2ca184402a8385f.png",
     "static/media/bg-main-mobile.png": "/Front-end--cartao-interativo/static/media/bg-main-mobile.caa4689407777a312ede.png",
     "index.html": "/Front-end--cartao-interativo/index.html",
     "static/media/icon-complete.svg": "/Front-end--cartao-interativo/static/media/icon-complete.8fd757c0c5c44b1d597ca411400e046d.svg",
-    "main.f76b31ee.css.map": "/Front-end--cartao-interativo/static/css/main.f76b31ee.css.map",
-    "main.65915251.js.map": "/Front-end--cartao-interativo/static/js/main.65915251.js.map"
+    "main.fcfca13a.css.map": "/Front-end--cartao-interativo/static/css/main.fcfca13a.css.map",
+    "main.c66b230e.js.map": "/Front-end--cartao-interativo/static/js/main.c66b230e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f76b31ee.css",
-    "static/js/main.65915251.js"
+    "static/css/main.fcfca13a.css",
+    "static/js/main.c66b230e.js"
   ]
 }
