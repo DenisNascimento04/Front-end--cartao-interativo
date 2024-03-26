@@ -229,26 +229,29 @@
 @media only screen and (max-width: 425px) {
   .container{
     display: block;
-    width: 100%;
+    width: 100vw;
+    /* background-color: red; */
   }
   .bg-main{
     content: url("./assets/bg-main-mobile.png");
-    width: 100%;
+    width: 100rem;
+    object-fit: fill;
     /* height: 500px; */
   }
   .cartao{
-    width: 280px;
-    height: 150px;
+    width: 16rem;
+    height: 10rem;
   }
 
   .cartao.c1{
-    top: 19%;
-    left: 5%;
+    top: 21%;
+    left: 9%;
     z-index: 1;
   }
 
   .cartao.c2{
-    top: 5%;
+    top: 3%;
+    left: 20%;
     z-index: 0;
   }
 
