@@ -14,20 +14,20 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 230px;
+  width: 24.4rem;
+  height: 14rem;
   /* background-repeat: no-repeat;  */
   z-index: 99;
   color: hsl(270, 3%, 87%);
 }
 .cartao.c1{
-  top: 20%;
-  left: 10%;
+  top: calc(100vh - 84%);
+  left: 8%;
 }
 
 .cartao.c2{
-  top: 60%;
-  left: 15%;
+  top: calc(100vh - 44%);
+  left: 12%;
 }
 
 .cartao .conteudo-cartao{
@@ -229,12 +229,12 @@
 @media only screen and (max-width: 425px) {
   .container{
     display: block;
-    width: 100vw;
+    width: 100%;
   }
   .bg-main{
     content: url("./assets/bg-main-mobile.png");
-    width: 100vw;
-    height: 500px;
+    width: 100%;
+    /* height: 500px; */
   }
   .cartao{
     width: 280px;
