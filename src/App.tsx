@@ -9,8 +9,8 @@ function App() {
 
   const [numCartao, setNumCartao] = useState("0000 0000 0000 0000")
   const [nome, setNome] = useState("Jane Appleseed")
-  const [ano, setAno] = useState("");
-  const [mes, setMes] = useState("");
+  const [ano, setAno] = useState("00");
+  const [mes, setMes] = useState("00");
   const [cvc, setCvc] = useState("000");
   var data = mes +"/"+ ano;
 
@@ -51,29 +51,45 @@ function App() {
     }
   }, [nome, mes, ano, cvc])
   
+  const reset = () => {
+    setNumCartao("0000 0000 0000 0000");
+    setNome("Jane Appleseed");
+    setAno("00");
+    setMes("00");
+    setCvc("000");
+    setCadastrado(false);
+  }
 
   const revisarDados = () => {
       var novoCartao = numCartao.replaceAll(" ", "");
       var cartaoCover = parseInt(novoCartao);
       var passe = false;
-      
-      if (novoCartao.length !== 16) {
-        if (novoCartao !== cartaoCover.toString()) {
-          setErrorCartao(true);
-        }
-        setErrorCartao(true);
-      }else{setErrorCartao(false)}
-      if (parseInt(mes) > 12 || mes.length !== 2 ) {
-        setErrorMes(true)
-      }else{setErrorMes(false)}
-      if (ano.length !== 2) {
-        setErrorAno(true)
-      }else{setErrorAno(false)}
-      if (cvc.length !== 3) {
-        setErrorCVC(true)
-      }else{setErrorCVC(false)}
 
-      veriFinal();
+      if(
+        numCartao !== "0000 0000 0000 000" &&
+        nome !== "Jane Appleseed" &&
+        mes !== "00" &&
+        ano !== "00" &&
+        cvc !== "000"
+      ) {
+        if (novoCartao.length !== 16) {
+          if (novoCartao !== cartaoCover.toString()) {
+            setErrorCartao(true);
+          }
+          setErrorCartao(true);
+        }else{setErrorCartao(false)}
+        if (parseInt(mes) > 12 || mes.length !== 2 ) {
+          setErrorMes(true)
+        }else{setErrorMes(false)}
+        if (ano.length !== 2) {
+          setErrorAno(true)
+        }else{setErrorAno(false)}
+        if (cvc.length !== 3) {
+          setErrorCVC(true)
+        }else{setErrorCVC(false)}
+        veriFinal();
+      }
+      
   }
 
   const veriFinal = () => {
@@ -129,7 +145,9 @@ function App() {
               <h1>Thank You!</h1>
               <p>We've added your card details</p>
             </div>
-            <a>Continue</a>
+            <button onClick={reset}>
+              Continue
+            </button>
            </div>
         :
           <form name='dados'>
@@ -184,9 +202,9 @@ function App() {
                 : null}
               </fieldset>
             </div>
-            <a onClick={revisarDados}>
+            <button onClick={revisarDados}>
               Confirm
-            </a>
+            </button>
           </form>
         }
       </main>

@@ -134,7 +134,7 @@
   color: hsl(270, 3%, 87%);
 }
 
-.formulario .complete a {
+.formulario .complete button{
   width: 100%;
   text-align: center;
   background-color: hsl(278, 68%, 11%);
@@ -144,6 +144,7 @@
   border-radius: 10px;
   font-family: Space Grotesk, sans-serif;
   color: hsl(270, 3%, 87%);
+  cursor: pointer;
 }
 
 .formulario form{
@@ -214,7 +215,7 @@
   width: 50px;
 }
 
-.formulario form a{
+.formulario form button{
   text-align: center;
   background-color: hsl(278, 68%, 11%);
   padding: 20px;
@@ -224,6 +225,7 @@
   font-family: Space Grotesk, sans-serif;
   color: hsl(270, 3%, 87%);
   min-width: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 425px) {
